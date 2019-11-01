@@ -6,8 +6,9 @@
   box-sizing: border-box;
 }
 
+
 html {
-  font-size: 62.5%;
+  font-size: 62.5%;  
 }
 
 @media (max-width: 1080px) {
@@ -33,10 +34,7 @@ a {
   color: inherit;
 }
 
-::selection {
-  background: #7159c1;
-  color: #fff;
-}
+
 
 .center {
   width: 100%;
@@ -86,18 +84,9 @@ header nav a:hover {
 
 header nav a.active {
   color: #7159c1;
-  font-weight: 700;
+  font-weight: 700; /* mais que negrito */
 }
 
-header nav a.active:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  left: 0;
-  bottom: -2px;
-  background: #0fcac6;
-}
 
 header nav a.nav-btn {
   background: #FFAB37;
@@ -151,7 +140,7 @@ header nav a.nav-btn:hover {
   }
 }
 
-@media (min-width: 721px) {
+@media (min-width: 721px) { /*tem que ser menor que 721 para aparecer o menu responsivo*/
   header .menu {
     display: none;
   }
@@ -237,7 +226,7 @@ header nav a.nav-btn:hover {
   box-shadow: 0 1px 3px rgba(0, 0, 0, .13);
 }
 
-@media (max-width: 1180px) {
+@media (max-width: 1080px) { /* o que for maior que 1080 */
   .banner {
     height: 450px;
   }
@@ -251,7 +240,7 @@ header nav a.nav-btn:hover {
   }
 }
 
-@media (max-width: 780px) {
+@media (max-width: 720px) { /*o que for maior que 720 */
   .banner {
     height: auto;
     padding: 4rem 0;
@@ -343,25 +332,12 @@ header nav a.nav-btn:hover {
   margin-right: 8px;
 }
 
-@media (max-width: 1240px) {
+@media (max-width: 1080px) {
   .dicas img {
     width: 50%;
   }
 }
 
-@media (max-width: 1000px) {
-  .dicas .center {
-    align-items: flex-start;
-  }
-
-  .dicas-text ul {
-    flex-direction: column;
-  }
-
-  .dicas-text li {
-    width: 100%;
-  }
-}
 
 @media (max-width: 720px) {
   .dicas {
@@ -475,7 +451,7 @@ header nav a.nav-btn:hover {
   margin-top: .3rem;
 }
 
-@media (max-width: 920px) {
+@media (max-width: 1080px) {
   .brinquedos-wrapper {
     width: 50%;
   }
@@ -489,7 +465,7 @@ header nav a.nav-btn:hover {
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 720px) {
   .brinquedos-list {
     margin-top: 3rem;
   }
@@ -528,92 +504,13 @@ header nav a.nav-btn:hover {
  
 }
 
-.blog-post i {
-  color: #0fcac6;
-  font-size: 14px;
-}
 
-.post-content {
-  padding: 2rem;
-  display: flex;
-}
-
-.post-content .avatar {
-  width: 100px;
-  height: 100px;
-  flex-shrink: 0;
-  border-radius: 50%;
-  margin-top: -px;
-  margin-right: 2.5rem;
-}
-
-.post-text .date {
-  display: flex;
-  align-items: center;
-  color: #666;
-}
-
-.post-text .date i {
-  margin-right: 8px;
-}
-
-.post-text h3 {
-  color: #444;
-  line-height: 1.3;
-  margin-top: .75rem;
-  transition: color .3s;
-}
-
-.post-footer {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2rem;
-}
-
-.post-footer span {
-  font-size: 1.5rem;
-  color: #666;
-  line-height: 1;
-}
-
-.post-footer i {
-  margin: 0 5px;
-  font-size: 13px;
-  transition: transform .2s;
-}
-
-.post-footer span:first-child {
-  width: 100px;
-  justify-content: center;
-  font-weight: bold;
-}
-
-.blog-post:hover {
-  box-shadow: 0 15px 20px rgba(113, 89, 193, .35);
-}
-.blog-post:hover .post-text h3 {
-  color: #7159c1;
-}
-.blog-post:hover .post-footer span:first-child i {
-  transform: translateX(5px);
-}
-
-@media (max-width: 1240px) {
+@media (max-width: 1080px) {
   .blog {
-    padding: 5rem 0 7rem;
-  }
+    padding: 5rem 0 7rem;  }  
 
-  .blog-post {
-    width: calc(50% - 2rem);
-  }
-
-  .post-content .avatar {
-    width: 60px;
-    height: 60px;
-  }
 }
+
 
 @media (max-width: 720px) {
   .blog .center {
@@ -626,21 +523,11 @@ header nav a.nav-btn:hover {
     max-width: 500px;
   }
 
-  .blog-post + .blog-post {
+  .blog-post  {
     margin-top: 4rem;
   }
-
-  .post-content {
-    flex-direction: column;
-  }
-
-  .post-text {
-    margin-top: 1.5rem;
-  }
-
-  .post-content .avatar {
-    align-self: center;
-  }
+ 
+  
 }
 
 /* FOOTER ------------------------------------------------------------------- */
@@ -649,6 +536,7 @@ footer {
   background-image: linear-gradient(-19deg, #e65c00 0%, #F9D423 100%);
   text-align: center;
   padding: 5rem 0;
+  
 }
 
 footer img {
@@ -667,3 +555,217 @@ footer span{
   font-size: 2.5rem;
   margin-left: 10px;
 }
+
+/* sobre -------------------------------------------------------------- */
+
+.box p  {  
+   width:90%;  
+   text-align:justify;
+   margin-left: 3rem;
+   
+ } 
+ .box img {
+   border-radius: 50%;
+   
+ }
+
+ @media(max-width:720px){
+   .box p {
+     width: 60%;
+     margin-left: 8rem;
+   }
+
+   .box img {
+     width: 60%;
+     height: 60%;
+     
+   }
+
+ }
+
+
+ /* produtos -------------------------------------------------------------- */
+ .produtos table {
+   width: 100%;
+   margin-left: auto;
+   
+   
+ }
+
+ .produtos table tr td    {
+   background-color: orange;
+   text-align: center;
+   color: white;  
+   
+ }
+
+ .produtos table th{
+  color: white;  
+  background-color: orange;
+ }
+
+
+ .produtos{display:flex; margin: auto;} /*tabela responsiva */
+
+   .tresp{width: 90%; text-align: center;}    
+
+    @media  (max-width: 1080x){
+      .produtos{width: 80%;}       
+     
+  }  
+  @media  (min-width: 720px){
+      .produtos{width:60%;}    
+          
+  }
+  /* contato -------------------------------------------------------------- */
+  .contato{    
+    margin-left: 3rem;        
+  } 
+
+  .nome {
+    font-weight: bold;
+  }
+
+  .tel {
+    font-weight: bold;
+  }
+
+  .email {
+    font-weight: bold;
+  }
+
+  .assunto {
+    font-weight: bold;
+  }
+
+  .lblnome{
+      background-color: whitesmoke;
+      height: 3rem;
+      width: 90%;    
+      
+  }
+
+  .lbltel{
+    background-color: whitesmoke;
+    height: 3rem;
+    width: 90%;
+  }
+
+  .lblemail{
+    background-color: whitesmoke;
+    height: 3rem;
+    width: 90%;
+  }
+
+  .textoassunto {
+    background-color: whitesmoke;
+    width: 90%;
+  }
+
+  .botao{
+    background-color: green;
+    color: white;
+    width: 10rem;
+    height: 4rem;
+    font-size: medium;
+  }
+
+/* banho e tosa -------------------------------------------------------------- */
+
+.banhoetosa{    
+    margin-left: 3rem;        
+  } 
+
+  .lblnome_dono{
+    font-weight: bold;
+  }
+
+.lblendereco_dono{
+    font-weight: bold;
+  }
+
+.lblcep{
+    font-weight: bold;
+  }
+
+  .lblemail_dono{
+    font-weight: bold;
+  }
+
+.lbltel_dono{
+    font-weight: bold;
+  }
+.lblnome_animal{
+    font-weight: bold;
+  }
+
+.lblporte_animal{
+    font-weight: bold;
+  }
+
+  .lbltipo_tosa{
+    font-weight: bold;
+  }
+.lblobs{
+    font-weight: bold;
+  }
+.lblindique{
+    font-weight: bold;
+  }
+.lblop1hr{
+    font-weight: bold;
+  }
+.lblop2hr{
+    font-weight: bold;
+  }
+.btenviar_banhoetosa{
+    background-color: green;
+    color: white;
+    width: 10rem;
+    height: 4rem;
+    font-size: medium;
+  }
+
+.nome_dono{
+    background-color: whitesmoke;
+    height: 3rem;
+    width: 90%;
+}
+.endereco_dono{
+    background-color: whitesmoke;
+    height: 3rem;
+    width: 90%;
+}
+.cep_dono{
+    background-color: whitesmoke;
+    height: 3rem;
+    width: 90%;
+}
+.email_dono{
+    background-color: whitesmoke;
+    height: 3rem;
+    width: 90%;
+}
+
+.tel_dono{
+    background-color: whitesmoke;
+    height: 3rem;
+    width: 90%;
+}
+
+.nome_animal{
+    background-color: whitesmoke;
+    height: 3rem;
+    width: 90%;
+}
+
+.textobs{
+    background-color: whitesmoke; 
+    width: 90%;
+}
+
+
+
+
+
+  
